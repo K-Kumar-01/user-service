@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "ea6f1f21-6deb-4a33-9772-c45b4ab11bba",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload Content Bulk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \n    {\n        \"title\": \"Harry5\",\n        \"description\": \"my desc\",\n        \"chapters\": [\n            {\n                \"name\": \"New\",\n                \"desc\": \"d1\"\n            },\n            {\n                \"name\": \"n2\",\n                \"desc\": \"d2\"\n            },\n            {\n                \"name\": \"n3\",\n                \"desc\": \"d3\"\n            },\n            {\n                \"name\": \"n4\",\n                \"desc\": \"d4\"\n            },\n            {\n                \"name\": \"n5\",\n                \"desc\": \"d5\"\n            },\n            {\n                \"name\": \"n6\",\n                \"desc\": \"d6\"\n            }\n        ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://content-service.vercel.app/series/create/many",
+					"protocol": "https",
+					"host": [
+						"content-service",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"series",
+						"create",
+						"many"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Upload Content Bulk",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    \n    {\n        \"title\": \"Harry5\",\n        \"description\": \"my desc\",\n        \"chapters\": [\n            {\n                \"name\": \"New\",\n                \"desc\": \"d1\"\n            },\n            {\n                \"name\": \"n2\",\n                \"desc\": \"d2\"\n            },\n            {\n                \"name\": \"n3\",\n                \"desc\": \"d3\"\n            },\n            {\n                \"name\": \"n4\",\n                \"desc\": \"d4\"\n            },\n            {\n                \"name\": \"n5\",\n                \"desc\": \"d5\"\n            },\n            {\n                \"name\": \"n6\",\n                \"desc\": \"d6\"\n            }\n        ]\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://content-service.vercel.app/series/create/many",
+							"protocol": "https",
+							"host": [
+								"content-service",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"series",
+								"create",
+								"many"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch all content",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://content-service.vercel.app/series/all",
+					"protocol": "https",
+					"host": [
+						"content-service",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"series",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch all content",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://content-service.vercel.app/series/all",
+							"protocol": "https",
+							"host": [
+								"content-service",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"series",
+								"all"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch content for a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://content-service.vercel.app/series/626921af16c0aa84b9e7f54b?userId=626923f840a0d6da986d5142",
+					"protocol": "https",
+					"host": [
+						"content-service",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"series",
+						"626921af16c0aa84b9e7f54b"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "626923f840a0d6da986d5142"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch content for a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://content-service.vercel.app/series/626921af16c0aa84b9e7f54b?userId=626923f840a0d6da986d5142",
+							"protocol": "https",
+							"host": [
+								"content-service",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"series",
+								"626921af16c0aa84b9e7f54b"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "626923f840a0d6da986d5142"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test\",\n    \"email\":\"testin2g@gmail.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://user-service-pi.vercel.app/user/create",
+					"protocol": "https",
+					"host": [
+						"user-service-pi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test\",\n    \"email\":\"testng@gmail.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://user-service-pi.vercel.app/user/create",
+							"protocol": "https",
+							"host": [
+								"user-service-pi",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://user-service-pi.vercel.app/user/all",
+					"protocol": "https",
+					"host": [
+						"user-service-pi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"user",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://user-service-pi.vercel.app/user/all",
+							"protocol": "https",
+							"host": [
+								"user-service-pi",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Unlock Chapter for a user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"626923f840a0d6da986d5142\",\n    \"seriesId\":\"626921af16c0aa84b9e7f54b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dailypass-service.vercel.app/dailypass/unlock",
+					"protocol": "https",
+					"host": [
+						"dailypass-service",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"dailypass",
+						"unlock"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unlock Chapter for a user",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"625dc2ef736ad5882dce47e7\",\n    \"seriesId\":\"625dc298546c7edede69172b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dailypass-service.vercel.app/dailypass/unlock",
+							"protocol": "https",
+							"host": [
+								"dailypass-service",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"dailypass",
+								"unlock"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Fetch Details of a single user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://user-service-pi.vercel.app/user/626923f840a0d6da986d5142",
+					"protocol": "https",
+					"host": [
+						"user-service-pi",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"user",
+						"626923f840a0d6da986d5142"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch Details of a single user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://user-service-pi.vercel.app/user/626923f840a0d6da986d5142",
+							"protocol": "https",
+							"host": [
+								"user-service-pi",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"user",
+								"626923f840a0d6da986d5142"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
